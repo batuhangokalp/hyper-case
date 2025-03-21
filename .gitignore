@@ -1,0 +1,37 @@
+# Node.js bağımlılıkları
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log*
+lerna-debug.log*
+
+# Derleme çıktıları
+build/
+dist/
+.next/
+out/
+.cache/
+
+# Editör ve IDE dosyaları
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# Ortam değişkenleri
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log dosyaları
+logs/
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
