@@ -8,16 +8,11 @@ const Products = React.memo(
     setFilteredProducts,
     categoryName,
     searchedProducts,
-    bestSellerData,
   }) => {
     useEffect(() => {
       let filtered = productsData;
 
-      if (categoryName === "Favoriler") {
-        filtered = bestSellerData
-          .filter((item) => item.totalSold > 10)
-          .map((item) => item.product);
-      } else if (categoryName !== "Tümü") {
+      if (categoryName !== "Tümü") {
         filtered = filtered.filter(
           (product) => product?.category === categoryName
         );
@@ -30,13 +25,7 @@ const Products = React.memo(
       }
 
       setFilteredProducts(filtered);
-    }, [
-      categoryName,
-      searchedProducts,
-      productsData,
-      setFilteredProducts,
-      bestSellerData,
-    ]);
+    }, [categoryName, searchedProducts, productsData, setFilteredProducts]);
 
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
@@ -51,5 +40,3 @@ const Products = React.memo(
 );
 
 export default Products;
-
-
