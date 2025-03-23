@@ -4,8 +4,6 @@ import {
   SearchOutlined,
   HomeOutlined,
   ShoppingCartOutlined,
-  CopyOutlined,
-  UserOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
 import { useSelector } from "react-redux";
@@ -26,7 +24,7 @@ const Header = ({ setSearchProducts }) => {
       <header className="py-4 px-6 flex justify-between items-center gap-10">
         <div className="logo">
           <Link to={"/"}>
-            <h2 className="text-2xl font-bold md:text-4xl">LOGO</h2>
+            <h2 className="text-2xl font-bold md:text-4xl">HYPER</h2>
           </Link>
         </div>
         <div
@@ -51,7 +49,7 @@ const Header = ({ setSearchProducts }) => {
             }`}
           >
             <HomeOutlined className="header-link-icon" />
-            <span className="header-link-span ">Ana Sayfa</span>
+            <span className="header-link-span ">Anasayfa</span>
           </Link>
           <Badge count={cartItems?.length} className="md:flex hidden">
             <Link
@@ -64,25 +62,6 @@ const Header = ({ setSearchProducts }) => {
               <span className="header-link-span ">Sepet</span>
             </Link>
           </Badge>
-
-          <Link
-            to={"/bills"}
-            className={`header-link ${
-              pathname === "/bills" && "active-header-link"
-            }`}
-          >
-            <CopyOutlined className="header-link-icon" />
-            <span className="header-link-span ">Faturalar</span>
-          </Link>
-          <Link
-            to={"/customers"}
-            className={`header-link ${
-              pathname === "/customers" && "active-header-link"
-            }`}
-          >
-            <UserOutlined className="header-link-icon" />
-            <span className="header-link-span ">Müşteriler</span>
-          </Link>
           <Popconfirm
             title="Çıkış Yap"
             description="Çıkış yapmak istediğinize emin misiniz?"

@@ -32,7 +32,7 @@ const CartTotals = () => {
                 <img
                   src={cartItem?.image}
                   alt={cartItem?.title}
-                  className="w-16 h-16 object-cover"
+                  className="w-16 h-16 object-contain"
                 />
                 <div className="flex flex-col ml-2">
                   <b className="max-w-[150px] truncate">{cartItem?.title}</b>

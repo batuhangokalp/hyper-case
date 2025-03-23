@@ -30,7 +30,7 @@ const RegisterForm = () => {
 
   return (
     <div className="xl:px-20 px-10 xl:w-1/2 w-full flex flex-col h-full justify-center relative">
-      <h1 className="text-center text-5xl font-bold mb-2">LOGO</h1>
+      <h1 className="text-center text-5xl font-bold mb-2">HYPER</h1>
       <Spin
         spinning={loading}
         size="large"

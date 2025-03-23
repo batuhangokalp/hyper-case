@@ -1,9 +1,7 @@
 import { Button, Card, Form, Input, message, Modal, Select } from "antd";
-import axios from "axios";
+import { clearCart } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
-import { clearCartAsync } from "../../redux/cartSlice";
-
-const API_URL = process.env.REACT_APP_API_URL;
+import { useNavigate } from "react-router-dom";
 
 const CreateBill = ({
   isModalOpen,
@@ -11,31 +9,17 @@ const CreateBill = ({
   getTotalPrice,
   KDV,
   cartItems,
-  userId,
 }) => {
   const [form] = Form.useForm();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const onFinish = async (values) => {
-    try {
-      const response = await axios.post(`${API_URL}/api/bills`, {
-        customerName: values.customerName,
-        phoneNumber: values.phoneNumber,
-        paymentMethod: values.paymentMethod,
-        cartItems: cartItems,
-        subTotal: getTotalPrice(),
-        tax: KDV,
-        totalAmount: getTotalPrice() + KDV,
-      });
-      if (response.status === 201) {
-        message.success("Sipariş başarıyla oluşturuldu");
-        form.resetFields();
-        setIsModalOpen(false);
-        dispatch(clearCartAsync(userId));
-      }
-    } catch (error) {
-      message.error(error.response.data.message);
-    }
+  const onFinish = async () => {
+    form.resetFields();
+    setIsModalOpen(false);
+    message.success("Sipariş başarıyla oluşturuldu");
+    dispatch(clearCart());
+    navigate("/");
   };
   return (
     <Modal
