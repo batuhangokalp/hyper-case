@@ -1,10 +1,10 @@
 # 🛒 E-Ticaret Sepet Uygulaması
 
-🚀 Canlı Demo: hyperapp.batuhangokalp.com
+[Canlı Demo: hyperapp.batuhangokalp.com](https://hyperapp.batuhangokalp.com/)
 
 Bu proje, **React, Redux Toolkit, Tailwind CSS ve Ant Design** kullanarak geliştirilmiş bir **alışveriş uygulamasıdır**. Kullanıcılar ürünleri sepete ekleyebilir, sepeti yönetebilir ve sipariş oluşturabilir.
 
-## 🚀 **Özellikler**
+## **Özellikler**
 
 - ✅ **Redux Toolkit ile State Yönetimi**
 - ✅ **React Router DOM ile Sayfa Yönetimi**
