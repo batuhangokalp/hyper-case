@@ -9,12 +9,6 @@ const CartTotals = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  // useEffect(() => {
-  //   if (userId) {
-  //     dispatch(fetchCartAsync(userId));
-  //   }
-  // }, [dispatch, userId]);
-
   const handleClearCart = () => {
     dispatch(clearCart());
   };
