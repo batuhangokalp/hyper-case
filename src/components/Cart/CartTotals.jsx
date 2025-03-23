@@ -20,14 +20,14 @@ const CartTotals = () => {
 
   const KDV = (getTotalPrice() * 8) / 100;
   return (
-    <div className="cart-totals-wrapper h-full max-h-[calc(100vh_-_110px)] flex flex-col">
+    <div className="cart-totals-wrapper h-full max-h-[calc(100vh_-_110px)] flex flex-col w-[350px]">
       <h2 className="bg-blue-600 text-center py-4 text-wrap font-bold text-white tracking-wide">
         Sepetteki Ürünler
       </h2>
       <ul className="cart-items px-2 flex flex-col gap-y-3 py-2 overflow-y-auto">
         {cartItems?.length > 0 ? (
           cartItems?.map((cartItem) => (
-            <li className="cart-item flex justify-between" key={cartItem.id}>
+            <li className="cart-item flex justify-between items-center" key={cartItem.id}>
               <div className="flex items-center">
                 <img
                   src={cartItem?.image}
