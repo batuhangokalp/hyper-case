@@ -33,5 +33,8 @@ Projeyi klonladıktan sonra;
 
 Gerekli bağımlılıkları yükleyin:
 **`npm install`**
+
+
 Projeyi çalıştırın:
+
 **`npm run start`**
