@@ -32,6 +32,7 @@ Bu proje, **React, Redux Toolkit, Tailwind CSS ve Ant Design** kullanarak geliş
 Projeyi klonladıktan sonra;
 
 Gerekli bağımlılıkları yükleyin:
+
 **`npm install`**
 
 
